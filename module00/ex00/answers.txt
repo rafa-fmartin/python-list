@@ -1,0 +1,5 @@
+pip list
+pip show numpy
+pip uninstall numpy
+pip install numpy
+pip freeze > /home/rassudok/projects/42-ai/python/python-list/module00/ex00/requirements.txt
