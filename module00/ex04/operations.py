@@ -42,7 +42,7 @@ Remainder:  {mod}""".format(
         )
 
         print(message)
-        
+
     return
 
 
