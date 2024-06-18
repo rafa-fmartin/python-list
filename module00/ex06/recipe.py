@@ -16,16 +16,19 @@ def get_recipe_names(cookbook: Dict):
 
 def get_recipe(cookbook: Dict, recipe_name: str):
     if recipe_name in cookbook.keys():
-        print("""\nRecipe for {name}
+        print(
+            """\nRecipe for {name}
     Ingredients list: {ingredients}
     To be eaten for {meal}
     Takes {prep_time} minutes of cooking
 """.format(
-            name=recipe_name,
-            ingredients=cookbook.get(recipe_name).get("ingredients"),
-            meal=cookbook.get(recipe_name).get("meal"),
-            prep_time=cookbook.get(recipe_name).get("prep_time")
-        ), end="")
+                name=recipe_name,
+                ingredients=cookbook.get(recipe_name).get("ingredients"),
+                meal=cookbook.get(recipe_name).get("meal"),
+                prep_time=cookbook.get(recipe_name).get("prep_time"),
+            ),
+            end="",
+        )
         return
     print("\nRecipe does not exist in the cookbook.")
 
@@ -96,15 +99,9 @@ def menu(cookbook: Dict):
 
 def main():
     cookbook = {
-        "sandwich": recipe(
-            ["ham", "bread", "cheese", "tomatoes"], "lunch", 10
-        ),
-        "cake": recipe(
-            ["flour", "sugar", "eggs"], "dessert", 60
-        ),
-        "salad": recipe(
-            ["avocado", "arugula", "tomatoes", "spinach"], "lunch", 15
-        ),
+        "sandwich": recipe(["ham", "bread", "cheese", "tomatoes"], "lunch", 10),
+        "cake": recipe(["flour", "sugar", "eggs"], "dessert", 60),
+        "salad": recipe(["avocado", "arugula", "tomatoes", "spinach"], "lunch", 15),
     }
     menu(cookbook)
 

@@ -9,8 +9,8 @@ Good luck!"""
 
 
 def main():
-    secret_number = random.choice(range(1,100))
-    
+    secret_number = random.choice(range(1, 100))
+
     attempts = 0
     while True:
         choice = input("What's your guess between 1 and 99?\n")
@@ -30,9 +30,14 @@ def main():
             if attempts == 1:
                 congrats = "Congratulations, you've got it on your first try!"
             else:
-                congrats = f"Congratulations, you've got it!\nYou won in {attempts} attempts!"
+                congrats = (
+                    f"Congratulations, you've got it!\nYou won in {attempts} attempts!"
+                )
             if secret_number == 42:
-                print("The answer to the ultimate question of life, the universe and everything is 42.\n"+congrats)
+                print(
+                    "The answer to the ultimate question of life, the universe and everything is 42.\n"
+                    + congrats
+                )
             else:
                 print(congrats)
             break
@@ -40,5 +45,5 @@ def main():
             print("That's not a number.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
