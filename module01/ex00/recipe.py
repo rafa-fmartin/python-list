@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Recipe():
+class Recipe:
     def __init__(
         self,
         name: str,
@@ -9,10 +9,10 @@ class Recipe():
         cooking_time: int,
         ingredients: List,
         recipe_type: str,
-        description: str = ""
+        description: str = "",
     ):
-        self.name = name        
-        if cooking_lvl in range (1, 6):
+        self.name = name
+        if cooking_lvl in range(1, 6):
             self.cooking_lvl = cooking_lvl
         else:
             print("cooking_lvl")
@@ -29,7 +29,7 @@ class Recipe():
             print("")
             return
         self.description = description
-        
+
     def __str__(self):
         txt = """Recipe: {}
     Cooking level: {}
@@ -37,11 +37,11 @@ class Recipe():
     Ingredients: {}
     Description: {}
     Recipe type: {}""".format(
-        self.name, 
-        self.cooking_lvl, 
-        self.cooking_time,
-        ', '.join(self.ingredients)[:-2],
-        self.description,
-        self.recipe_type
-    )
+            self.name,
+            self.cooking_lvl,
+            self.cooking_time,
+            ", ".join(self.ingredients)[:-2],
+            self.description,
+            self.recipe_type,
+        )
         return txt
