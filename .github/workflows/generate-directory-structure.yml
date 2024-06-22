@@ -17,16 +17,16 @@ jobs:
               run: |
                 tree -I '.git|.github' --dirsfirst > directory_structure.md
             
-            - name: Format Directory Structure for README
+            - name: Format Directory Structure
               id: format-for-readme
               run: |
                 content=$(cat directory_structure.md)
-                echo "$content" | sed '1d' > STRUCTURE.md
+                echo "$content" | sed '1d' > SUPPORT.md
             
             - name: Commit changes
               run: |
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
-                git add STRUCTURE.md
+                git add SUPPORT.md
                 git commit -m "Add directory structure"
                 git push origin main
