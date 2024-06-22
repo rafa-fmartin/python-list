@@ -7,5 +7,11 @@ def ft_map(function_to_apply, iterable):
         An iterable.
         None if the iterable can not be used by the function.
     """
-    for item in iterable:
-        yield function_to_apply(item)
+    if not callable(function_to_apply):
+        raise TypeError
+    
+    try:
+        for item in iterable:
+            yield function_to_apply(item)
+    except Exception as e:
+        yield None
