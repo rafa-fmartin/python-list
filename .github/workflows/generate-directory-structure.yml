@@ -21,12 +21,12 @@ jobs:
               id: format-for-readme
               run: |
                 content=$(cat directory_structure.md)
-                echo "$content" | sed '1d' > SUPPORT.md
+                echo "$content" | sed '1d' > CONTRIBUTING.md
             
             - name: Commit changes
               run: |
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
-                git add SUPPORT.md
+                git add CONTRIBUTING.md
                 git commit -m "Add directory structure"
                 git push origin main
