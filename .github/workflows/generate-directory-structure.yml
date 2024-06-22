@@ -21,17 +21,12 @@ jobs:
               id: format-for-readme
               run: |
                 content=$(cat directory_structure.md)
-                echo "$content" | sed '1d' > formatted_directory_structure.md
-                
-            - name: Update README.md
-              run: |
-                echo "\n\n## 🦖 Repo Structure" >> README.md
-                cat formatted_directory_structure.md >> README.md
+                echo "$content" | sed '1d' > STRUCTURE.md
             
             - name: Commit changes
               run: |
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
-                git add README.md
-                git commit -m "Update README with directory structure"
+                git add STRUCTURE.md
+                git commit -m "Add directory structure"
                 git push origin main
