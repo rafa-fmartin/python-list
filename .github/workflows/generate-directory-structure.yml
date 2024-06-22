@@ -26,7 +26,7 @@ jobs:
             - name: Update README.md
               run: |
                 echo "" >> README.md
-                echo "## Repo Structure" >> README.md
+                echo "## 🦖 Repo Structure" >> README.md
                 cat formatted_directory_structure.md >> README.md
             
             - name: Commit changes
