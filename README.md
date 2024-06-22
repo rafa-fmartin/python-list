@@ -14,8 +14,8 @@ Module 01 introduces object-oriented programming concepts in Python, along with 
 ## :t-rex: How to Use This Repository
 1. **Clone the Repository:**
 ``` bash
-git clone https://github.com/your-username/python-list-exercises.git
-cd python-list-exercises
+git clone https://github.com/rafa-fmartin/python-list.git
+cd python-list
 ```
 
 2. **Navigate to the Desired Module:**
