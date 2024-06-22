@@ -16,11 +16,10 @@ jobs:
               id: generate-structure
               run: |
                 tree -I '.git|.github' --dirsfirst > directory_structure.md
+                cat directory_structure.md
             
             - name: Commit changes
               run:
-                git config --local user.email "action@github.com"
-                git config --local user.name "GitHub Action"
                 git add directory_structure.md
                 git commit -m "Auto-generated directory structure"
                 git push
