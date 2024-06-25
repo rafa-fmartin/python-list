@@ -15,7 +15,6 @@ def what_are_the_vars(*args, **kwargs):
 
 class ObjectC(object):
     def __init__(self):
-    # ... Your code here ...
         pass
 
 def doom_printer(obj):
