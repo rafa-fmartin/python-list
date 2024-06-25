@@ -41,12 +41,21 @@
 │   └── ex05
 │       └── the_bank.py
 ├── module02
-│   └── ex00
-│       ├── ft_filter.py
-│       ├── ft_map.py
-│       └── ft_reduce.py
+│   ├── ex00
+│   │   ├── ft_filter.py
+│   │   ├── ft_map.py
+│   │   └── ft_reduce.py
+│   ├── ex01
+│   │   └── main.py
+│   ├── ex02
+│   │   └── logger.py
+│   └── ex03
+│       ├── csvreader.py
+│       ├── test.csv
+│       └── test.py
 ├── LICENSE
 ├── README.md
+├── SUPPORT.md
 └── directory_structure.md
 
-20 directories, 30 files
+23 directories, 36 files
